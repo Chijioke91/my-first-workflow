@@ -6,14 +6,19 @@ jobs:
   run-actions-task:
     runs-on: ubuntu-latest
     steps:
-      - name: log directory details
+      - name: list files
         run: |
           pwd
           ls -a
+
+      - name: log files after checkout
+        uses: actions/checkout@v2
+
       - name: Simple JS Actions
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: James
+
       - name: log time
         run: echo "${{ steps.greet.outputs.time }}"
