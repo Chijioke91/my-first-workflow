@@ -6,6 +6,10 @@ jobs:
   run-actions-task:
     runs-on: ubuntu-latest
     steps:
+      - name: log directory details
+        run: |
+          pwd
+          ls -a
       - name: Simple JS Actions
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
