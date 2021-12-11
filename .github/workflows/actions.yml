@@ -1,13 +1,14 @@
 name: Actions Workflow
 
 on:
-  push:
-    branches:
-      - main
-      # - "feature/*" # will match feature/anything but not feature/feata/featc
-      # - "feature/**" # matches feature/anything/anything
-      # - "!feature/feat-a" # will not be triggered when a push is made to this branch
-      # pattern-cheat-sheet: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+  pull_request
+  # push:
+  #   branches:
+  #     - main
+  # - "feature/*" # will match feature/anything but not feature/feata/featc
+  # - "feature/**" # matches feature/anything/anything
+  # - "!feature/feat-a" # will not be triggered when a push is made to this branch
+  # pattern-cheat-sheet: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
   # repository_dispatch:
   #   types: [build]
 
